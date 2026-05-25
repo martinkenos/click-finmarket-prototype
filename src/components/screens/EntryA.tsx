@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import type { Theme, ProductKey, FlowContext } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Card } from '../ui/Card'
-import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
-import { fmtAmt } from '../../lib/format'
+import type { Theme, ProductKey, FlowContext } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
+import { fmtAmt } from '@/lib/format'
 
 type Props = {
   d: Theme

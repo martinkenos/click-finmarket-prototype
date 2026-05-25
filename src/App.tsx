@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import type { ThemeKey, Variant, Route } from './types'
-import { THEMES } from './data/themes'
-import { ProtoFlow } from './ProtoFlow'
-import { FloatingControls } from './FloatingControls'
-import { applyTheme } from './lib/telegram'
+import type { ThemeKey, Variant, Route } from '@/types'
+import { THEMES } from '@/data/themes'
+import { ProtoFlow } from '@/ProtoFlow'
+import { FloatingControls } from '@/__dev__/FloatingControls'
+import { applyTheme } from '@/services/telegram'
 
 /**
  * App shell — fullscreen Mini App container.

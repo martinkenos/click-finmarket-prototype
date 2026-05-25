@@ -1,7 +1,7 @@
-import type { Theme, ProductKey } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Card } from '../ui/Card'
-import { Icon } from '../ui/Icon'
+import type { Theme, ProductKey } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Card } from '@/components/ui/Card'
+import { Icon } from '@/components/ui/Icon'
 
 type Props = {
   d: Theme

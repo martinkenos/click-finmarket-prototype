@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { ICONS } from '../../icons/phosphor'
+import { ICONS } from '@/icons/phosphor'
 
 type Props = {
   name: keyof typeof ICONS

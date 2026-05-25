@@ -1,4 +1,4 @@
-import type { Bank } from '../../types'
+import type { Bank } from '@/types'
 
 type Props = {
   b: Bank

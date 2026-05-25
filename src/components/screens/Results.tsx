@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import type { Theme, FlowContext, Bank } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Tag } from '../ui/Tag'
-import { Icon } from '../ui/Icon'
-import { PageBack } from '../ui/PageBack'
-import { BankLogo } from '../ui/BankLogo'
-import { BANKS } from '../../data/banks'
-import { PRODUCTS } from '../../data/products'
-import { fmtAmt } from '../../lib/format'
+import type { Theme, FlowContext, Bank } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Tag } from '@/components/ui/Tag'
+import { Icon } from '@/components/ui/Icon'
+import { PageBack } from '@/components/ui/PageBack'
+import { BankLogo } from '@/components/ui/BankLogo'
+import { BANKS } from '@/data/banks'
+import { PRODUCTS } from '@/data/products'
+import { fmtAmt } from '@/lib/format'
 
 type Props = {
   d: Theme

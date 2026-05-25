@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react'
-import type { Theme } from '../../types'
+import type { Theme } from '@/types'
 import { Icon } from './Icon'
 
 type Props = {

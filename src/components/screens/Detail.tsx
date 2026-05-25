@@ -1,10 +1,10 @@
-import type { Theme, FlowContext } from '../../types'
-import { Card } from '../ui/Card'
-import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
-import { BankLogo } from '../ui/BankLogo'
-import { PRODUCTS } from '../../data/products'
-import { fmtAmt, annuityPayment } from '../../lib/format'
+import type { Theme, FlowContext } from '@/types'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
+import { BankLogo } from '@/components/ui/BankLogo'
+import { PRODUCTS } from '@/data/products'
+import { fmtAmt, annuityPayment } from '@/lib/format'
 
 type Props = {
   d: Theme

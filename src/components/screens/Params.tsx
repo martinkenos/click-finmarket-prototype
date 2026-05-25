@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import type { Theme, FlowContext } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Card } from '../ui/Card'
-import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
-import { PageBack } from '../ui/PageBack'
-import { PRODUCTS } from '../../data/products'
-import { fmtAmt } from '../../lib/format'
+import type { Theme, FlowContext } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
+import { PageBack } from '@/components/ui/PageBack'
+import { PRODUCTS } from '@/data/products'
+import { fmtAmt } from '@/lib/format'
 
 type Props = {
   d: Theme

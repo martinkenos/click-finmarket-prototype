@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import type { Theme, FlowContext } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
-import { SURVEY } from '../../data/survey'
+import type { Theme, FlowContext } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
+import { SURVEY } from '@/data/survey'
 
 type Props = {
   d: Theme

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'node:path'
 
 // https://vitejs.dev/config/
 // Base path is the repo name so that asset URLs work under
@@ -7,4 +8,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/click-finmarket-prototype/',
+  resolve: {
+    alias: { '@': path.resolve(__dirname, 'src') },
+  },
 })

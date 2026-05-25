@@ -1,4 +1,4 @@
-import type { Product, ProductKey } from '../types'
+import type { Product, ProductKey } from '@/types'
 
 /** Catalog of financial products. */
 export const PRODUCTS: Record<ProductKey, Product> = {

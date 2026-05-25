@@ -1,4 +1,4 @@
-import type { SurveyQuestion } from '../types'
+import type { SurveyQuestion } from '@/types'
 
 /** Three-question QuickPick survey shown in Variant A. */
 export const SURVEY: SurveyQuestion[] = [

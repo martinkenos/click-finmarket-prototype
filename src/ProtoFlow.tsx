@@ -1,13 +1,13 @@
-import type { Theme, Variant, Route, FlowContext } from './types'
-import { EntryA } from './components/screens/EntryA'
-import { EntryB } from './components/screens/EntryB'
-import { QuickPick } from './components/screens/QuickPick'
-import { Params } from './components/screens/Params'
-import { Loader } from './components/screens/Loader'
-import { Results } from './components/screens/Results'
-import { Detail, DetailActions } from './components/screens/Detail'
-import { Success } from './components/screens/Success'
-import { BottomSheet } from './components/ui/BottomSheet'
+import type { Theme, Variant, Route, FlowContext } from '@/types'
+import { EntryA } from '@/components/screens/EntryA'
+import { EntryB } from '@/components/screens/EntryB'
+import { QuickPick } from '@/components/screens/QuickPick'
+import { Params } from '@/components/screens/Params'
+import { Loader } from '@/components/screens/Loader'
+import { Results } from '@/components/screens/Results'
+import { Detail, DetailActions } from '@/components/screens/Detail'
+import { Success } from '@/components/screens/Success'
+import { BottomSheet } from '@/components/ui/BottomSheet'
 
 type Props = {
   d: Theme

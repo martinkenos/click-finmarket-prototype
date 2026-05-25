@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import type { Variant, ThemeKey, Route } from './types'
-import { THEMES } from './data/themes'
-import { Icon } from './components/ui/Icon'
+import type { Variant, ThemeKey, Route } from '@/types'
+import { THEMES } from '@/data/themes'
+import { Icon } from '@/components/ui/Icon'
 
 type Props = {
   dirK: ThemeKey

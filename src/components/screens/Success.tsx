@@ -1,9 +1,9 @@
 import { useRef } from 'react'
-import type { Theme, FlowContext } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Card } from '../ui/Card'
-import { Button } from '../ui/Button'
-import { Icon } from '../ui/Icon'
+import type { Theme, FlowContext } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui/Icon'
 
 type Props = {
   d: Theme

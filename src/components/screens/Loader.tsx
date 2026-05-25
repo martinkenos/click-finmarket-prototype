@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import type { Theme } from '../../types'
-import { Screen } from '../ui/Screen'
-import { Icon } from '../ui/Icon'
+import type { Theme } from '@/types'
+import { Screen } from '@/components/ui/Screen'
+import { Icon } from '@/components/ui/Icon'
 
 type Props = {
   d: Theme

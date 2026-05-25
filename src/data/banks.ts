@@ -1,4 +1,4 @@
-import type { Bank } from '../types'
+import type { Bank } from '@/types'
 
 /** Five banks that appear in the results list of this prototype. */
 export const BANKS: Bank[] = [

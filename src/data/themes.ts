@@ -1,4 +1,4 @@
-import type { Theme, ThemeKey } from '../types'
+import type { Theme, ThemeKey } from '@/types'
 
 /**
  * Three design directions explored in this prototype.

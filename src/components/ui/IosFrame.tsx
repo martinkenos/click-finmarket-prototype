@@ -8,11 +8,7 @@ type Props = {
   battery?: number
 }
 
-/**
- * Decorative iPhone-shaped frame for desktop presentation.
- * NOTE: Currently the App renders fullscreen (Mini App mode), so this is unused
- * by default. Kept for future "Compare A/B side-by-side" presentation view.
- */
+/** Decorative iPhone-shaped frame for desktop presentation. Unused by default — kept for future "Compare A/B side-by-side" view. */
 export function IosFrame({ children, darkMode, time = '9:41', battery = 100 }: Props) {
   const tc = darkMode ? '#fff' : '#000'
   return (

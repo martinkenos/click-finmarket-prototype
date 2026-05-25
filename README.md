@@ -1,6 +1,6 @@
-# Click Finmarket — Telegram Mini App prototype
+# Click Finmarket — интерактивный прототип
 
-Интерактивный прототип сервиса подбора финансовых продуктов (кредиты, депозиты) для Telegram Mini App. Сравнивает два UX-сценария — A (Quick Pick) и B (амаунт-первым) — на едином движке.
+Прототип сервиса подбора финансовых продуктов (кредиты, депозиты). Сравнивает два UX-сценария — A (Quick Pick) и B (сумма-первым) — на едином движке с тремя визуальными темами.
 
 **Live demo:** https://martinkenos.github.io/click-finmarket-prototype/
 
@@ -8,7 +8,7 @@
 
 - **Vite 8** — dev server, сборщик
 - **React 19** + **TypeScript 6** — компоненты, типы
-- **Tailwind CSS 3** — для будущих utility-классов (сейчас стили inline через theme prop, см. ниже)
+- **Tailwind CSS 3** — для utility-классов (сейчас стили inline через theme prop, см. ниже)
 - **GitHub Pages** + **GitHub Actions** — автоматический деплой при push в `main`
 
 ## Запуск локально
@@ -32,21 +32,21 @@ npm run build
 
 ```
 src/
-├── App.tsx                          корневой компонент (3 куска state: theme, variant, route)
+├── App.tsx                          корневой компонент (state: theme, variant, route)
 ├── ProtoFlow.tsx                    оркестратор экранов и переходов
-├── FloatingControls.tsx             плавающее меню (тема + вариант, для презентации)
 ├── main.tsx                         entry — подключает Inter и render корня
 ├── index.css                        глобальные стили + keyframes анимаций
+├── __dev__/
+│   └── FloatingControls.tsx         плавающее меню (тема + вариант, для презентации)
 ├── types/index.ts                   все TypeScript типы прототипа
-├── data/                            
+├── data/
 │   ├── themes.ts                    3 темы (classic, accent, dark)
 │   ├── banks.ts                     каталог банков
 │   ├── products.ts                  каталог продуктов
 │   └── survey.ts                    3 вопроса Quick Pick
 ├── icons/phosphor.ts                15 SVG-иконок (Phosphor Fill, MIT)
 ├── lib/
-│   ├── format.ts                    форматирование сумм, аннуитет
-│   └── telegram.ts                  typed wrapper над window.Telegram.WebApp
+│   └── format.ts                    форматирование сумм, аннуитет
 └── components/
     ├── ui/                          переиспользуемые примитивы
     │   ├── Icon.tsx
@@ -73,19 +73,19 @@ src/
 
 ### Темы — runtime объекты, передаются как prop `d`
 
-Тема — это `Theme` объект (см. `src/types/index.ts`), который компоненты принимают как prop `d`. Стили цветов применяются inline. Альтернатива (CSS variables + Tailwind theme через `bg-card`) была отвергнута: для прототипа с runtime-переключаемыми темами объектный подход проще, меньше косвенности, и переключение работает мгновенно без перерасчёта CSS.
+Тема — это `Theme` объект (см. `src/types/index.ts`), который компоненты принимают как prop `d`. Стили цветов применяются inline. Альтернатива (CSS variables + Tailwind theme) была отвергнута: для прототипа с runtime-переключаемыми темами объектный подход проще, меньше косвенности, и переключение работает мгновенно без перерасчёта CSS.
 
 ### Inline-стили vs Tailwind
 
-В прототипе **намеренно много inline-стилей**: цвета, тени, радиусы — динамические от темы. Tailwind подключен и доступен для статичных utility-классов в будущих доработках. Когда прототип эволюционирует в продакшен — стоит вынести дизайн-токены в CSS variables и переписать на Tailwind utility-классы.
+В прототипе **намеренно много inline-стилей**: цвета, тени, радиусы — динамические от темы. Tailwind подключен и доступен для статичных utility-классов. При эволюции в продакшен — стоит вынести дизайн-токены в CSS variables и переписать на Tailwind.
 
 ### Маршрутизация
 
-Минимальная — собственный `route` state в `App.tsx` (одно из 7 значений: entry / quickpick / params / loader / results / detail / success). React Router не подключен сознательно: для линейного flow прототипа лишний слой.
+Минимальная — собственный `route` state в `App.tsx` (7 значений: entry / quickpick / params / loader / results / detail / success). React Router не подключен сознательно: для линейного flow прототипа лишний слой.
 
-### Telegram WebApp
+### Path aliases
 
-Все вызовы `window.Telegram.WebApp.*` спрятаны за typed wrapper в `src/lib/telegram.ts`. Снаружи Telegram функции — no-op, прототип работает в обычном браузере без падений.
+Все импорты используют алиас `@/` (например, `@/components/ui/Button`). Настроен в `tsconfig.app.json` и `vite.config.ts`.
 
 ## Деплой
 
@@ -94,8 +94,8 @@ src/
 2. Собирает проект (`npm run build`)
 3. Публикует `dist/` на GitHub Pages
 
-URL — `https://martinkenos.github.io/click-finmarket-prototype/`. Base path задан в `vite.config.ts` (`base: '/click-finmarket-prototype/'`). При переименовании репо — поменять в обоих местах.
+URL — `https://martinkenos.github.io/click-finmarket-prototype/`. Base path задан в `vite.config.ts` (`base: '/click-finmarket-prototype/'`).
 
 ## Лицензия
 
-Phosphor Icons — MIT (https://phosphoricons.com/). Остальной код — внутренний прототип Click. При публикации добавить лицензию.
+Phosphor Icons — MIT (https://phosphoricons.com/). Остальной код — внутренний прототип Click.
